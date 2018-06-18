@@ -1,0 +1,11 @@
+package: github.com/scottmcclary1/predix-insights-cli
+import:
+- package: github.build.ge.com/predix-data-services/predix-insights-go-sdk
+  version: addVerboseMode
+  vcs: git
+  subpackages:
+  - predixinsights
+- package: github.com/buger/goterm
+- package: github.com/mitchellh/go-homedir
+- package: github.com/spf13/cobra
+- package: github.com/spf13/viper
