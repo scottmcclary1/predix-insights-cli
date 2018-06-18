@@ -1,7 +1,9 @@
 builds:
   - main: main.go
     flags:
-      - -ldflags "-X github.com/scottmcclary1/predix-insights-cli/cmd.Version=`cat version` -X github.com/scottmcclary1/predix-insights-cli/cmd.GitHash=`git rev-parse HEAD`"
+      - -ldflags:
+       - -X github.com/scottmcclary1/predix-insights-cli/cmd.Version={{.Tag}}
+       - -X github.com/scottmcclary1/predix-insights-cli/cmd.GitHash={{.Commit}}
     binary: pi
     goos:
       - windows
