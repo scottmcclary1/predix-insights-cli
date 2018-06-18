@@ -6,6 +6,8 @@ install:
   - mkdir -p $HOME/bin
   - tar -vxz -C $HOME/bin --strip=1 -f glide-v0.13.1-darwin-amd64.tar.gz
   - export PATH="$HOME/bin:$PATH"
+  - ls -lah $HOME/bin
+  - ls -lah $HOME/bin/darwin-amd64
   - glide install --strip-vendor
 deploy:
 - provider: script
