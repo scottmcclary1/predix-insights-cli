@@ -1,9 +1,8 @@
 builds:
+  - ldflags:
+   - -X "github.com/scottmcclary1/predix-insights-cli/cmd.Version={{.Tag}}"
+   - -X "github.com/scottmcclary1/predix-insights-cli/cmd.GitHash={{.Commit}}"
   - main: main.go
-    flags:
-      - ldflags:
-       - -X github.com/scottmcclary1/predix-insights-cli/cmd.Version={{.Tag}}
-       - -X github.com/scottmcclary1/predix-insights-cli/cmd.GitHash={{.Commit}}
     binary: pi
     goos:
       - windows
