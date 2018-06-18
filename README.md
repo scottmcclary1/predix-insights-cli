@@ -1,5 +1,7 @@
 # Predix Insights Command Line Interface
 
+[![Build status](https://travis-ci.org/scottmcclary1/predix-insights-cli.svg?master)](https://travis-ci.org/scottmcclary1)
+
 ## Remove Configuration (optional)
 ```
 $ rm -rf ~/.pi
