@@ -26,7 +26,7 @@ if [ ! $? -eq 0 ]; then
     echo 'Error: Go is not installed. Please install Go manaully and then rebuild PI CLI.'
     exit 1
 fi
-go build -ldflags "-X github.build.ge.com/predix-data-services/predix-insights-cli/cmd.Version=`cat version` -X github.build.ge.com/predix-data-services/predix-insights-cli/cmd.GitHash=`git rev-parse HEAD`" -o pi
+go build -ldflags "-X github.com/scottmcclary1/predix-insights-cli/cmd.Version=`cat version` -X github.com/scottmcclary1/predix-insights-cli/cmd.GitHash=`git rev-parse HEAD`" -o pi
 if [ ! $? -eq 0 ]; then
     echo 'Error: PI CLI source code could not be compiled.'
     exit 1

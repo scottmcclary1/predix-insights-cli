@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.build.ge.com/predix-data-services/predix-insights-cli/cmd"
+	"github.com/scottmcclary1/predix-insights-cli/cmd"
 )
 
 func main() {
