@@ -9,6 +9,15 @@ builds:
       - linux
     goarch:
       - amd64
+brew:
+  github:
+    owner: scottmcclary1
+    name: homebrew-tap
+  folder: Formula
+  homepage:  https://www.predix.io/
+  description: PI is a CLI library for Predix Insights. This top technology lets you concentrate on building analytical pipelines, not managing infrastructure.
+  test: |
+    system "#{bin}/pi --version"
 archive:
   format: tar.gz
   replacements:
