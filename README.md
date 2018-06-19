@@ -2,19 +2,29 @@
 
 [![Build status](https://travis-ci.org/scottmcclary1/predix-insights-cli.svg?master)](https://travis-ci.org/scottmcclary1)
 
-## Remove Configuration (optional)
+## Install PI CLI (MacOS)
 ```
-$ rm -rf ~/.pi
-```
-
-## Build PI CLI
-```
-$ ./build.sh
+$ brew install scottmcclary1/tap/predix-insights-cli
 ```
 
-## Source Bash Profile
+### Setup Tab Completion
+#### Add the following line to your ~/.bash_profile:
+```
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+```
+#### Source Bash Profile
 ```
 $ source ~/.bash_profile
+```
+
+## Uninstall PI CLI (MacOS)
+```
+brew uninstall --force predix-insights-cli
+```
+
+### Remove Configuration (optional)
+```
+$ rm -rf ~/.pi
 ```
 
 ## Show PI CLI

@@ -14,7 +14,7 @@ brew:
     owner: scottmcclary1
     name: homebrew-tap
   folder: Formula
-  caveats: "Run the following command or open a new terminal tab/window:\n\tsource ~/.bash_profile"
+  caveats: "Run the following command or open a new terminal tab/window:\n  source ~/.bash_profile"
   homepage:  https://www.predix.io/
   description: PI is a CLI library for Predix Insights. This top technology lets you concentrate on building analytical pipelines, not managing infrastructure.
   dependencies:
