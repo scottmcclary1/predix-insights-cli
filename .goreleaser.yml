@@ -14,7 +14,7 @@ brew:
     owner: scottmcclary1
     name: homebrew-tap
   folder: Formula
-  caveats: "source ~/.bashrc"
+  caveats: "Run the following command or open a new terminal tab/window:\n\tsource ~/.bash_profile"
   homepage:  https://www.predix.io/
   description: PI is a CLI library for Predix Insights. This top technology lets you concentrate on building analytical pipelines, not managing infrastructure.
   dependencies:
@@ -25,7 +25,6 @@ brew:
     bin.install "pi"
     mkdir_p "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
     cp "scripts/pi_completion.sh", "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
-    system "echo 'if [ -f $(brew --prefix)/etc/bash_completion ]; then . $(brew --prefix)/etc/bash_completion; fi' >> ~/.bashrc"
 archive:
   format: tar.gz
   replacements:
