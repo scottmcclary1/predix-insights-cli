@@ -23,8 +23,8 @@ brew:
   install: |
     bin.install "pi"
     mkdir_p "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
-    ls "#{prefix}"
-    ls "#{buildpath}"
+    pwd
+    cp "scripts/pi_completion.sh", "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
     echo "if [ -f #{HOMEBREW_PREFIX} ]; then . #{HOMEBREW_PREFIX}/etc/bash_completion; fi" >> ~/.bashrc
     source ~/.bashrc
 archive:
