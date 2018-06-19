@@ -16,10 +16,20 @@ brew:
   folder: Formula
   homepage:  https://www.predix.io/
   description: PI is a CLI library for Predix Insights. This top technology lets you concentrate on building analytical pipelines, not managing infrastructure.
+  dependencies:
+    - bash-completion
   test: |
     system "#{bin}/pi --version"
+  install: |
+    bin.install "pi"
+    mkdir_p HOMEBREW_PREFIX"/etc/bash_completion.d"
+    mv prefix"/scripts/pi_completion.sh", HOMEBREW_PREFIX"/etc/bash_completion.d/pi_completion.sh"
+    echo "if [ -f #{HOMEBREW_PREFIX} ]; then . #{HOMEBREW_PREFIX}/etc/bash_completion; fi" >> ~/.bashrc
+    source ~/.bashrc
 archive:
   format: tar.gz
   replacements:
     amd64: 64-bit
     darwin: macOS
+  files:
+    - scripts/pi_completion.sh
