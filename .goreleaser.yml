@@ -1,6 +1,6 @@
 builds:
   - ldflags:
-      - -s -w -X github.com/scottmcclary1/predix-insights-cli/cmd.Version={{.Tag}} -X github.com/scottmcclary1/predix-insights-cli/cmd.GitHash={{.Commit}}
+      - -s -w -X github.com/scottmcclary1/predix-insights-cli/cmd.Version={{.Tag}} -X github.com/scottmcclary1/predix-insights-cli/cmd.GitHash={{.Commit}} -X github.com/scottmcclary1/predix-insights-cli/cmd.GitDate={{.Date}}
     main: main.go
     binary: pi
     goos:
@@ -9,6 +9,8 @@ builds:
       - linux
     goarch:
       - amd64
+git:
+  short_hash: true
 brew:
   github:
     owner: scottmcclary1

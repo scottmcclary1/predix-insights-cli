@@ -62,7 +62,8 @@ var (
 	interactive                              bool
 	force                                    bool
 	Version                                  = "No Version Provided"
-	GitHash                                  = "No githash Provided"
+	GitHash                                  = "No GitHash Provided"
+	GitDate                                  = "No GitDate Provided"
 	loginPI                                  = pi{}
 	healthCheckPI                            = pi{}
 	versionCheckPI                           = pi{}

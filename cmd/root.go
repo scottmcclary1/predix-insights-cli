@@ -577,7 +577,7 @@ func init() {
 	}
 
 	// set PI CLI version
-	RootCmd.Version = Version + "\ngit commit hash " + GitHash
+	RootCmd.Version = Version + "\ngit commit hash " + GitHash + "\ngit commit date " + GitDate
 
 	// set up flags for all sub commands
 	for _, c := range commands {
